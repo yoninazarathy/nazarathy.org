@@ -1,0 +1,57 @@
+<head>
+  <script>
+    function answerGiven() {
+      var answer = document.getElementById("q1");
+      alert(answer)
+//       if(answer === 'Moscow'){
+//          alert("Good job!");
+//       }else{
+//         alert("Nope! Try again...")
+//       }
+    }
+    
+    function myLine(){
+      //alert("test........")
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.moveTo(0,0);
+      ctx.lineTo(200,100);
+      ctx.lineTo(0,100);
+      ctx.stroke();
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.beginPath();
+      ctx.arc(95,50,40,0,2*Math.PI);     
+      ctx.stroke(); 
+      ctx.beginPath();
+       ctx.arc(100,300,40,0,2*Math.PI);
+      ctx.stroke();
+       ctx.beginPath();
+      ctx.arc(85,285,5,0,2*Math.PI);     
+      ctx.stroke(); 
+      ctx.beginPath();
+      ctx.arc(115,285,5,0,2*Math.PI);     
+      ctx.stroke(); 
+      ctx.beginPath();
+      ctx.arc(100,320,10,2*Math.PI,Math.PI);     
+      ctx.stroke();
+      ctx.moveTo(100,260);
+     ctx.lineTo(120,240); 
+      ctx.stroke();
+    }
+  </script>
+</head>
+<body>
+  <form>
+    What is the capital of Russia?<br>
+    <input type="text" name="capital-answer" id="q1" onchange="answerGiven()">
+  <form/>
+  <br>
+  <br>
+  <canvas id="myCanvas" width="200" height="400" style="border:1px solid #aaaaaa;">
+  </canvas>
+
+</body>
+<script>
+  myLine()
+</script>
