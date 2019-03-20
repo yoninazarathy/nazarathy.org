@@ -19,8 +19,12 @@ yarden
 var yardenWords = ["did", "day", "made", "said", "used", "send", "drip", "down", "food", "done", "lady", "sold", "door", "grade", "sound", "dark", "beside", "die", "dead", "hundread", "drive", "dream", "dear", "weekend", "paddle", "middle", "thousand", "decide", "during", "double", "difference", "damage", "daughter"]
 var text = "";
 var i;
-for (i = 0; i < yardenWords.length; i++) {
-  text += yardenWords[i] + "<br>";
-}
+// for (i = 0; i < yardenWords.length; i++) {
+//   text += yardenWords[i] + "<br>";
+// }
+var r = Math.floor((Math.random() * yardenWords.length)); 
+console.log(yardenWords.length)
+// alert(r)
+text = yardenWords[r]
 document.getElementById("demo").innerHTML = text;
 </script>
