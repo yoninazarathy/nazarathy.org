@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <audio id="myAudio">
+        <source src="beep-03.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    <a href="index.html"> back to main page</a>
+    <p>Every time you press the key you will hear a beep.</p>
+
+    <input type="text" onkeypress="myFunction()">
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myAudio"); 
+            x.play(); 
+        }
+    </script>
+
+</body>
+</html>
