@@ -3,6 +3,17 @@
   <link rel="stylesheet" type="text/css" href="yarden.css">
   
 </head>
+
+<audio id="a-sound">
+  <source src="sounds/a_sound.m4a">
+</audio>
+<audio id="b-sound">
+  <source src="sounds/b_sound.m4a">
+</audio>
+
+
+
+
 <center>
 <h1>Yarden</h1>
 </center>
@@ -16,3 +27,17 @@ Here below are my favorite YouTube videos:
 <center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/o67ExpMGGFA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
+
+<input type="text" onkeyup="myFunction()" id="text-input">
+
+<script>
+  function myFunction() {
+    var textvalue = document.getElementById("text-input").value.slice(-1)
+    if(textvalue == "a"){
+      document.getElementById("a-sound").play()
+    }
+    if(textvalue == "b"){
+      document.getElementById("b-sound").play()
+    }
+  }
+</script>
